@@ -1,0 +1,132 @@
+{
+    "travel_spots": [
+      {
+        "category": "Couples",
+        "image_url": "https://images.pexels.com/photos/19149614/pexels-photo-19149614/free-photo-of-couple-sitting-at-taj-mahal.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "place_name": "Taj Mahal, India",
+        "best_time_to_travel": "October to March",
+        "fun_fact": "The Taj Mahal is a UNESCO World Heritage Site and is considered one of the Seven Wonders of the World. It was built by Mughal emperor Shah Jahan in memory of his third wife Mumtaz Mahal."
+      },
+      {
+        "category": "Couples",
+        "image_url": "https://images.pexels.com/photos/1029021/pexels-photo-1029021.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "place_name": "Santorini, Greece",
+        "best_time_to_travel": "May to October",
+        "fun_fact": "Santorini is famous for its white-washed houses with blue accents, stunning sunsets, and volcanic black sand beaches."
+      },
+      {
+        "category": "Couples",
+        "image_url": "https://images.pexels.com/photos/1446624/pexels-photo-1446624.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "place_name": "Paris, France",
+        "best_time_to_travel": "April to June or September to October",
+        "fun_fact": "Paris is known as the City of Love and is home to iconic landmarks like the Eiffel Tower, the Louvre Museum, and the Arc de Triomphe."
+      },
+      
+      {
+        "category": "Couples",
+        "image_url": "https://images.pexels.com/photos/1287441/pexels-photo-1287441.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "place_name": "Maldives",
+        "best_time_to_travel": "November to April",
+        "fun_fact": "The Maldives is a tropical paradise with stunning beaches, crystal clear waters, and luxurious overwater bungalows."
+      },
+      {
+        "category": "Couples",
+        "image_url": "https://images.pexels.com/photos/9482125/pexels-photo-9482125.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "place_name": "Bora Bora, French Polynesia",
+        "best_time_to_travel": "May to October",
+        "fun_fact": "Bora Bora is a volcanic island with turquoise lagoons, lush mountains, and overwater bungalows."
+      },
+      
+      {
+        "category": "Couples",
+        "image_url": "https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "place_name": "Kyoto, Japan",
+        "best_time_to_travel": "April to May or September to November",
+        "fun_fact": "Kyoto is a historic city with numerous temples, shrines, and gardens. It is also known for its traditional tea ceremonies and geisha districts."
+      },
+      
+      {
+        "category": "Vacation",
+        "image_url": "https://images.pexels.com/photos/9656533/pexels-photo-9656533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "place_name": "Hawaii, USA",
+        "best_time_to_travel": "April to May ",
+        "fun_fact": "Hawaii is known for its beautiful beaches, active volcanoes, and lush rainforests."
+      },
+      
+      {
+        "category": "Vacation",
+        "image_url": "https://images.pexels.com/photos/2225439/pexels-photo-2225439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "place_name": "Rome, Italy",
+        "best_time_to_travel": "April to June or September to October",
+        "fun_fact": "Rome is a historic city with ancient ruins, beautiful churches, and delicious Italian food."
+      },
+      {
+        "category": "Vacation",
+        "image_url": "https://images.pexels.com/photos/77171/pexels-photo-77171.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "place_name": "London, England",
+        "best_time_to_travel": "April to May or September to October",
+        "fun_fact": "London is a cosmopolitan city with world-class museums, theaters, and shopping."
+      },
+    
+      {
+        "category": "Vacation",
+        "image_url": "https://images.pexels.com/photos/2339009/pexels-photo-2339009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "place_name": "Tokyo, Japan",
+        "best_time_to_travel": "April to May or September to November",
+        "fun_fact": "Tokyo is a modern city with a rich history and culture, known for its neon lights, bustling markets, and delicious cuisine."
+      },
+      
+      {
+        "category": "Vacation",
+        "image_url": "https://images.pexels.com/photos/1707310/pexels-photo-1707310.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "place_name": "Dubai, UAE",
+        "best_time_to_travel": "November to April",
+        "fun_fact": "Dubai is a modern city with towering skyscrapers, luxurious shopping malls, and a vibrant nightlife."
+      },
+      {
+        "category": "Random",
+        "image_url": "https://images.pexels.com/photos/18717329/pexels-photo-18717329/free-photo-of-the-treasury-in-petra-in-jordan.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "place_name": "Petra, Jordan",
+        "best_time_to_travel": "March to May",
+        "fun_fact": "Petra is an ancient city carved into sandstone cliffs and is a UNESCO World Heritage Site."
+      },
+      {
+        "category": "Random",
+        "image_url": "https://images.pexels.com/photos/2929906/pexels-photo-2929906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "place_name": "Machu Picchu, Peru",
+        "best_time_to_travel": "Dry season (May to September)",
+        "fun_fact": "Machu Picchu is an ancient Incan city located in the Andes Mountains and is a UNESCO World Heritage Site."
+      },
+      {
+        "category": "Random",
+        "image_url": "https://images.pexels.com/photos/831088/pexels-photo-831088.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "place_name": "Iceland",
+        "best_time_to_travel": "June to August",
+        "fun_fact": "Iceland is known for its glaciers, volcanoes, and geothermal hot springs."
+      },
+      
+      {
+        "category": "Random",
+        "image_url": "https://images.pexels.com/photos/2495575/pexels-photo-2495575.jpeg",
+        "place_name": "Angkor Wat, Cambodia",
+        "best_time_to_travel": "November to April",
+        "fun_fact": "Angkor Wat is a vast temple complex and is the largest religious monument in the world. It was built in the 12th century by the Khmer Empire."
+      },
+      
+    
+      {
+        "category": "Random",
+        "image_url": "https://images.pexels.com/photos/7398017/pexels-photo-7398017.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "place_name": "The Grand Canyon, USA",
+        "best_time_to_travel": "Spring or Fall",
+        "fun_fact": "The Grand Canyon is a steep-sided canyon carved by the Colorado River over millions of years."
+      },
+      {
+        "category": "Random",
+        "image_url": "https://images.pexels.com/photos/11971154/pexels-photo-11971154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "place_name": "The Amazon Rainforest, South America",
+        "best_time_to_travel": "Dry season (June to August)",
+        "fun_fact": "The Amazon Rainforest is the largest rainforest in the world and is home to a vast array of plant and animal life."
+      }
+    ]
+  }

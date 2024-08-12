@@ -1,0 +1,29 @@
+{
+    "top_visited_spots": [
+      {
+        "place_name": "Taj Mahal, India",
+        "image_url": "https://images.pexels.com/photos/5499902/pexels-photo-5499902.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "description": "A stunning white marble mausoleum built by Mughal emperor Shah Jahan in memory of his third wife Mumtaz Mahal. It's considered one of the Seven Wonders of the World."
+      },
+      {
+        "place_name": "Great Wall of China",
+        "image_url": "https://images.pexels.com/photos/19163029/pexels-photo-19163029/free-photo-of-drone-shot-of-people-walking-on-the-great-wall-of-china.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "description": "A series of fortifications that were built over centuries to protect China from invaders. It's one of the most iconic landmarks in the world."
+      },
+      {
+        "place_name": "Angkor Wat, Cambodia",
+        "image_url": "https://images.pexels.com/photos/5769408/pexels-photo-5769408.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "description": "A vast temple complex and the largest religious monument in the world. It was built in the 12th century by the Khmer Empire."
+      },
+      {
+        "place_name": "Machu Picchu, Peru",
+        "image_url": "https://images.pexels.com/photos/17060849/pexels-photo-17060849/free-photo-of-clouds-over-machu-picchu-ruins.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "description": "An ancient Incan city located in the Andes Mountains. It's a UNESCO World Heritage Site and one of the most popular tourist destinations in South America."
+      },
+      {
+        "place_name": "Eiffel Tower, Paris, France",
+        "image_url": "https://images.pexels.com/photos/2675268/pexels-photo-2675268.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "description": "An iconic wrought-iron lattice tower on the Champ de Mars in Paris. It's one of the most recognizable landmarks in the world."
+      }
+    ]
+  }
