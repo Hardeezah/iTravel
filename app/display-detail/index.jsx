@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, Dimensions, TouchableOpacity, Image, FlatList } from 'react-native';
+import { View, Text, Image, StyleSheet, Dimensions, FlatList, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { AntDesign, Ionicons, Entypo } from '@expo/vector-icons';
+import Carousel from 'react-native-reanimated-carousel';
 import MapView, { Marker } from 'react-native-maps';
 import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
-import Carousel from 'react-native-reanimated-carousel';
-import Feather from '@expo/vector-icons/Feather';
-import { AntDesign, Ionicons, Entypo } from '@expo/vector-icons';
-import Timeline from 'react-native-timeline-flatlist';
 
 export default function TripDetails() {
   const { tripData } = useLocalSearchParams();
@@ -54,15 +52,39 @@ export default function TripDetails() {
     }));
   };
 
-  const renderTimelineData = (schedule) => {
-    return schedule.map((activity) => ({
-      time: activity.time,
-      title: activity.activity,
-      description: activity.placeDetails,
-      lineColor: '#A8D1DF',
-      icon: <Ionicons name="location-sharp" size={16} color="#0365FA" />,
-    }));
-  };
+  const renderActivity = (activity, idx) => (
+    <View key={idx} style={styles.activityContainer}>
+      {activity.activity && (
+        <View style={{
+          display: 'flex',
+          flexDirection: 'row',
+          gap: 5
+        }}>
+          <Entypo name="location-pin" size={24} color="#36D6CA" />
+            <Text style={styles.activityText}>{activity.activity}</Text>
+
+        </View>
+      )}
+      {activity.time && (
+        <Text style={styles.detailText}>Time: {activity.time}</Text>
+      )}
+      {activity.placeDetails && (
+        <Text style={styles.detailText}>Details: {activity.placeDetails}</Text>
+      )}
+      {activity.ticketPricing && (
+        <Text style={styles.detailText}>Ticket Pricing: {activity.ticketPricing}</Text>
+      )}
+      {activity.restaurantAddress && (
+        <Text style={styles.detailText}>Restaurant Address: {activity.restaurantAddress}</Text>
+      )}
+      {activity.timeToTravel && (
+        <Text style={styles.detailText}>Time to Travel: {activity.timeToTravel}</Text>
+      )}
+      {activity.geoCoordinates && (
+        <Text style={styles.detailText}>Location Coordinates: {activity.geoCoordinates}</Text>
+      )}
+    </View>
+  );
 
   const renderContent = () => {
     return [
@@ -105,14 +127,13 @@ export default function TripDetails() {
       {
         key: 'flightDetails',
         content: (
-          <>
-            <View style={styles.container}>
+          <View style={styles.container}>
             <Text style={styles.sectionHeader}>Flight Details</Text>
             {tripDetail.tripList.flight_details.flight_options.map((flight, index) => (
               <View key={index} style={[styles.detailContainer, styles.shadow]}>
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                   <View style={{ display: 'flex', flexDirection: 'row', gap: 7, alignSelf: 'center' }}>
-                    <Feather name="calendar" size={14} color="#92D4D7" />
+                    <Ionicons name="calendar" size={14} color="#92D4D7" />
                     <Text style={{ fontFamily: 'nunito-exlight', fontSize: 10 }}>{flight.departure_date}</Text>
                   </View>
                   <Text style={{ fontFamily: 'nunito-semibold', fontSize: 10 }}>{flight.flight_number}</Text>
@@ -136,14 +157,12 @@ export default function TripDetails() {
                 </View>
               </View>
             ))}
-            </View>
-          </>
+          </View>
         ),
       },
       {
         key: 'hotelDetails',
         content: (
-          <>
           <View style={styles.container}>
             <Text style={styles.sectionHeader}>Hotel Details</Text>
             <View style={{ flexDirection: 'row', gap: 30, marginVertical: 10 }}>
@@ -152,14 +171,13 @@ export default function TripDetails() {
               </Text>
               <AntDesign name="arrowright" size={16} color="gray" />
             </View>
-
             <Carousel
               width={SCREEN_WIDTH - 40}  
               height={430}
               data={tripDetail.tripList.hotel_options}
               renderItem={({ item }) => (
                 <View style={styles.hotelContainer}>
-                  <Image source={require('./../../assets/images/hotel-placeholder.jpg')} style={styles.image} />
+                  <Image source={{ uri: item.hotel_image_url }} style={styles.image} />
                   <View style={{ padding: 15 }}>
                     <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 }}>
                       <Text style={{ fontFamily: 'nunito-semibold', fontSize: 17 }}>{item.hotel_name}</Text>
@@ -183,14 +201,12 @@ export default function TripDetails() {
               }}
               scrollAnimationDuration={500}
             />
-            </View>
-          </>
+          </View>
         ),
       },
       {
         key: 'itinerary',
         content: (
-          <>
           <View style={styles.container}>
             <Text style={styles.sectionHeader}>Itineraries</Text>
             {Object.keys(tripDetail.tripList.itinerary).map((day, index) => (
@@ -208,27 +224,12 @@ export default function TripDetails() {
                 </TouchableOpacity>
                 {expandedCards[day] && (
                   <View style={styles.cardContent}>
-                    <Timeline
-                      data={renderTimelineData(tripDetail.tripList.itinerary[day].schedule)}
-                      circleSize={15}
-                      circleColor='#A8D1DF'
-                      lineColor='#fff'
-                      timeContainerStyle={{ minWidth: 52, marginTop: -5 }}
-                      timeStyle={{ textAlign: 'center',  color: '#0365FA', padding: 5, borderRadius: 13, fontFamily:'nunito-semibold', }}
-                      descriptionStyle={{ fontFamily: 'nunito-exlight', fontSize: 12, marginBottom: 20 }}
-                      titleStyle={{fontFamily: 'nunito-exbold',fontSize: 16, }}
-                      options={{
-                        style: { paddingTop: 5 },
-                      }}
-                      columnFormat='two-column'
-                      innerCircle={'icon'}
-                    />
+                    {tripDetail.tripList.itinerary[day].schedule.map(renderActivity)}
                   </View>
                 )}
               </View>
             ))}
-            </View>
-          </>
+          </View>
         ),
       },
     ];
@@ -236,9 +237,6 @@ export default function TripDetails() {
 
   return (
     <FlatList
-    style={{
-      
-    }}
       data={renderContent()}
       renderItem={({ item }) => item.content}
       keyExtractor={(item) => item.key}
@@ -293,8 +291,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   detailText: {
-    fontSize: 16,
-    marginBottom: 5,
+    fontSize: 14,
+    marginBottom: 9,
+    fontFamily: 'nunito',
   },
   shadow: {
     shadowColor: '#000',
@@ -335,11 +334,13 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   activityContainer: {
-    marginBottom: 10,
+    marginBottom: 40,
   },
   activityText: {
-    fontSize: 16,
-    fontFamily: 'nunito',
+    fontSize: 14,
+    fontFamily: 'nunito-exbold',
+    width: '95%',
+    marginBottom: 30
   },
   errorContainer: {
     flex: 1,
